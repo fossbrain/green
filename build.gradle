@@ -1,6 +1,6 @@
 task wrapper(type: Wrapper) {
-      gradleVersion = '1.10'
-      distributionUrl = "https://github.com/10QueensRoad/gradle/releases/download/REL_${gradleVersion}-java8/gradle-${gradleVersion}-bin.zip"
+    gradleVersion = '1.10'
+    distributionUrl = "https://github.com/10QueensRoad/gradle/releases/download/REL_${gradleVersion}-java8/gradle-${gradleVersion}-bin.zip"
 }
 
 // Apply the scala plugin to add support for Scala

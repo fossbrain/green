@@ -1,4 +1,4 @@
 
 class Library {
-  def someLibraryMethod(): Boolean = true
+    def someLibraryMethod(): Boolean = true
 }
