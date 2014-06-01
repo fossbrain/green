@@ -44,3 +44,10 @@ tasks.withType(ScalaCompile) {
 apply plugin: 'application'
 
 mainClassName = "Main"
+
+applicationDistribution.from('.') {
+    include 'README'
+    include 'NOTICE'
+    include 'LICENSE'
+    include 'CHANGELOG'
+}
