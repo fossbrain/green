@@ -1,3 +1,4 @@
+package org.fossbrain.green
 
 object Main {
     def main(args: Array[String]) {
