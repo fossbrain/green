@@ -10,6 +10,21 @@ version = '0.1.0-SNAPSHOT'
 
 apply plugin: 'scala'
 
+// Separate the itests from the regular integration tests
+sourceSets {
+    itest {
+        scala.srcDir file('src/itest/scala')
+        resources.srcDir file('src/itest/resources')
+    }
+}
+
+task itest(type: Test) {
+    testClassesDir = sourceSets.itest.output.classesDir
+    classpath = sourceSets.itest.runtimeClasspath
+}
+
+check.dependsOn itest
+
 repositories {
     mavenCentral()
 }
@@ -31,6 +46,11 @@ dependencies {
     testCompile 'junit:junit:4.11'
     testCompile 'org.scalatest:scalatest_2.10:2.1.7'
     // testRuntime 'org.scala-lang.modules:scala-xml_2.11:1.0.1'
+
+    itestCompile sourceSets.main.output
+    itestCompile configurations.testCompile
+    itestCompile sourceSets.test.output
+    itestRuntime configurations.testRuntime
 }
 
 // uses the zinc version of the scala compiler instead of the ant one

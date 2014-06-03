@@ -1,15 +1,18 @@
 package org.fossbrain.green
 
-import org.scalatest.FunSuite
-import org.junit.runner.RunWith
-import org.scalatest.junit.JUnitRunner
+import org.scalatest.{FunSpec, Matchers}
 
-@RunWith(classOf[JUnitRunner])
-class LibrarySuite extends FunSuite {
+class LibrarySuite extends FunSpec with Matchers {
 
-    test("someLibraryMethod is always true") {
-        def library = new Library
-        assert(library.someLibraryMethod)
+    describe("some library method should") {
+        it("someLibraryMethod is always true") {
+            def library = new Library
+            library.someLibraryMethod should be(true)
+        }
+
+        it("also do something fancy euda") {
+            true should be(true)
+        }
     }
 
 }
