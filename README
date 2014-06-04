@@ -3,6 +3,9 @@ Green
 
 Is a very simple private application to maintain my finances.
 
+
+[![Build Status](https://travis-ci.org/fossbrain/green.png?branch=master)](https://travis-ci.org/fossbrain/green)
+
 The name
 ----------
 I've no idea, just green is the color of money, isn't it :)
