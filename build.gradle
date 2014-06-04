@@ -66,8 +66,14 @@ apply plugin: 'application'
 mainClassName = "Main"
 
 applicationDistribution.from('.') {
-    include 'README'
-    include 'NOTICE'
-    include 'LICENSE'
-    include 'CHANGELOG'
+    include('README.md')
+    rename('README.md', 'README')
+
+    include('NOTICE.md')
+    rename('NOTICE.md', 'NOTICE')
+
+    include('CHANGELOG.md')
+    rename('CHANGELOG.md', 'CHANGELOG')
+
+    include('LICENSE')
 }
