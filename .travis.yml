@@ -1,0 +1,6 @@
+jdk: oraclejdk8
+env:
+     - TERM=dumb
+
+script:
+     - ./gradlew test distZip itest
